@@ -1,0 +1,70 @@
+{
+  "transport": 2169.24,
+  "energy": 1817.5980000000002,
+  "diet": 2089.3704125,
+  "waste": 161.5536,
+  "lifestyle": 115.7355,
+  "total": 6353.4975125,
+  "breakdown": [
+    {
+      "name": "Transport",
+      "value": 2169,
+      "color": "hsl(var(--chart-1))"
+    },
+    {
+      "name": "Energy",
+      "value": 1818,
+      "color": "hsl(var(--chart-3))"
+    },
+    {
+      "name": "Diet",
+      "value": 2089,
+      "color": "hsl(var(--chart-2))"
+    },
+    {
+      "name": "Waste",
+      "value": 162,
+      "color": "hsl(var(--chart-4))"
+    },
+    {
+      "name": "Lifestyle",
+      "value": 116,
+      "color": "hsl(var(--chart-5))"
+    }
+  ],
+  "comparison": [
+    {
+      "label": "You",
+      "value": 6.35
+    },
+    {
+      "label": "World Avg",
+      "value": 4.7
+    },
+    {
+      "label": "US Avg",
+      "value": 16
+    },
+    {
+      "label": "EU Avg",
+      "value": 6.8
+    },
+    {
+      "label": "India Avg",
+      "value": 1.9
+    },
+    {
+      "label": "Target 2030",
+      "value": 2.5
+    }
+  ],
+  "rating": "Above Average",
+  "tips": [
+    "🚗 Transportation is your biggest source. Consider carpooling, cycling, or switching to an electric vehicle.",
+    "✈️ Reducing one round-trip flight can save 500-2000 kg CO2 annually.",
+    "⚡ Switch to a renewable energy provider to cut electricity emissions by up to 85%.",
+    "🏠 Improve home insulation to reduce heating energy by 20-40%.",
+    "🥗 Reducing meat consumption by half can save over 500 kg CO2 per year.",
+    "🌾 Buy local and seasonal produce to reduce food transportation emissions."
+  ]
+}

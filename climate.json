@@ -1,0 +1,19 @@
+{
+  "data": [],
+  "meta": {
+    "years": [],
+    "header_years": [],
+    "sorting": {
+      "sort_col": "iso_code3",
+      "sort_dir": "ASC"
+    },
+    "columns": [
+      "id",
+      "iso_code3",
+      "country",
+      "data_source",
+      "sector",
+      "gas"
+    ]
+  }
+}

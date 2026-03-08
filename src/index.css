@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 160 15% 6%;
+    --foreground: 150 20% 92%;
+
+    --card: 160 12% 10%;
+    --card-foreground: 150 20% 92%;
+
+    --popover: 160 12% 10%;
+    --popover-foreground: 150 20% 92%;
+
+    --primary: 152 58% 42%;
+    --primary-foreground: 160 15% 6%;
+
+    --secondary: 160 12% 16%;
+    --secondary-foreground: 150 20% 85%;
+
+    --muted: 160 10% 14%;
+    --muted-foreground: 150 10% 55%;
+
+    --accent: 165 70% 36%;
+    --accent-foreground: 160 15% 6%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 160 12% 18%;
+    --input: 160 12% 18%;
+    --ring: 152 58% 42%;
+
+    --radius: 0.75rem;
+
+    --glass-bg: 160 12% 12%;
+    --glass-border: 160 15% 22%;
+    --glass-highlight: 152 58% 42%;
+
+    --sidebar-background: 160 12% 8%;
+    --sidebar-foreground: 150 20% 85%;
+    --sidebar-primary: 152 58% 42%;
+    --sidebar-primary-foreground: 160 15% 6%;
+    --sidebar-accent: 160 12% 14%;
+    --sidebar-accent-foreground: 150 20% 85%;
+    --sidebar-border: 160 12% 18%;
+    --sidebar-ring: 152 58% 42%;
+
+    --chart-1: 152 58% 42%;
+    --chart-2: 165 70% 36%;
+    --chart-3: 38 92% 50%;
+    --chart-4: 0 62% 50%;
+    --chart-5: 200 70% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-glass/40 backdrop-blur-xl border border-glass-border/30 shadow-lg;
+  }
+
+  .glass-strong {
+    @apply bg-glass/60 backdrop-blur-2xl border border-glass-border/40 shadow-xl;
+  }
+
+  .glass-subtle {
+    @apply bg-glass/20 backdrop-blur-md border border-glass-border/20;
+  }
+
+  .glass-glow {
+    box-shadow: 
+      0 0 30px -5px hsl(var(--primary) / 0.15),
+      0 0 60px -10px hsl(var(--accent) / 0.1),
+      inset 0 1px 0 0 hsl(var(--glass-border) / 0.3);
+  }
+
+  .smoke-effect {
+    background: 
+      radial-gradient(ellipse at 20% 50%, hsl(var(--primary) / 0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, hsl(var(--accent) / 0.06) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 80%, hsl(var(--primary) / 0.04) 0%, transparent 50%);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)), hsl(var(--primary)));
+  }
+
+  .glow-text {
+    text-shadow: 0 0 40px hsl(var(--primary) / 0.4), 0 0 80px hsl(var(--primary) / 0.2);
+  }
+
+  .input-glass {
+    @apply bg-glass/30 backdrop-blur-md border border-glass-border/30 text-foreground placeholder:text-muted-foreground focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all duration-300;
+  }
+
+  .step-active {
+    @apply bg-primary text-primary-foreground shadow-lg;
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.4);
+  }
+
+  .step-completed {
+    @apply bg-primary/20 text-primary border border-primary/40;
+  }
+
+  .step-inactive {
+    @apply bg-glass/30 text-muted-foreground border border-glass-border/20;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 4s ease-in-out infinite;
+  }
+
+  .animate-smoke {
+    animation: smoke-drift 8s ease-in-out infinite;
+  }
+
+  .grid-shimmer {
+    animation: shimmer 10s linear infinite;
+  }
+}
+
+@keyframes shimmer {
+  0% { transform: translateY(0) scale(1); opacity: 0.1; }
+  50% { transform: translateY(20px) scale(1.05); opacity: 0.25; }
+  100% { transform: translateY(0) scale(1); opacity: 0.1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes smoke-drift {
+  0%, 100% { transform: translateX(0) translateY(0); opacity: 0.3; }
+  25% { transform: translateX(10px) translateY(-5px); opacity: 0.5; }
+  50% { transform: translateX(-5px) translateY(-10px); opacity: 0.3; }
+  75% { transform: translateX(-10px) translateY(-3px); opacity: 0.6; }
+}
