@@ -103,7 +103,7 @@ https://www.linkedin.com/in/sujal-khanolkar-425371335
 
 # 📜 License
 
-MIT License – open for learning and educational use.
+License – educational use.
 
 [1]: https://github.com/nishantp22/carbon-footprint-calculator?utm_source=chatgpt.com "GitHub - NP-Hardest/carbon-footprint-calculator: A carbon footprint calculator with dashboard, for the SEE department, IIT Kanpur"
 
